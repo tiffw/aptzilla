@@ -1,0 +1,50 @@
+.mush-title {
+padding-left: 20px;
+padding-right: 20px;
+}
+
+.navbar-btn {
+	float: right;
+	margin-right: 10px;
+}
+.jumbotron {
+	min-height: 500px;
+	text-align: center;
+}
+
+.container {
+	margin-top: 150px;
+	margin-bottom: 150px;
+}
+
+.submit-ingredient {
+	float: right;
+}
+
+.meals {
+/*	margin-top: 200px;*/
+}
+
+
+
+
+.food-image {
+	height: 500px;
+}
+
+.food-info {
+	float: right;
+}
+
+.food-data {
+	height: 437px;
+	border-style: solid;
+	border-width: thin;
+	border-color: ;
+	border-radius: 5px;
+}
+
+.masonry-container {
+	margin-top: 150px;
+
+}
