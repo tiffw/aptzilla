@@ -1,0 +1,28 @@
+{
+  "name": "aptzilla",
+  "version": "1.0.0",
+  "description": "search apartments which are safe and nearby public commute options",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cheetahM/aptzilla.git"
+  },
+  "keywords": [
+    "apartment",
+    "finder"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cheetahM/aptzilla/issues"
+  },
+  "homepage": "https://github.com/cheetahM/aptzilla#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4"
+  }
+}
