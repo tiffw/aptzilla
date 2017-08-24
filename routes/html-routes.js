@@ -12,4 +12,9 @@ module.exports = function(app) {
   });
 
 
+// this will send the details page to the front
+ app.get("/detailsPage", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/detailsPage.html"));
+  });
+
 };
