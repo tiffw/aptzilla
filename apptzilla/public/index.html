@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Aptzilla</title>
+
+	<!--Call to Bootstrap-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!--Call to Flickity-->
+	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+	<!--Call to style CSS-->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	
+	<!--Call to jQuery, Bootstrap, and Flickity Scripts-->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js">
+		</script>
+
+
+	<!--Call to Custom Javascript-->
+	<script type="text/javascript" src="assets/javascript/app.js"></script>
+</head>
+
+
+<body>
+<div class="container" id="headerDiv">
+	<!--Aptzilla Logo-->
+	<div class="row">
+		<a class="navbar-brand" href="#">
+			<img alt="Brand" src="http://via.placeholder.com/250x60">
+		</a>
+	</div>
+
+	<div class="row">
+		<br>
+		<br>
+		<center>
+			<h2>Find Your Perfect Apartment...Fast!</h2>
+		</center>
+	</div>
+	
+	<!-- Search Query -->
+	<form role="search">
+		<div class="form-group row">
+			<div class="col-xs-1"></div>
+
+		    <div class="col-xs-2">
+		    	<input type="text" class="form-control city" placeholder="City">
+		  	</div>
+
+		 <!--  	<div class="col-xs-2">
+		    	<input type="text" class="form-control" id="area" placeholder="Area">
+		  	</div> -->
+
+		  	<div class="col-xs-2">
+		    	<input type="text" class="form-control bedroom" placeholder="Bedroom">
+		  	</div>
+
+		  	<div class="col-xs-2">
+		    	<input type="text" class="form-control pricemin" placeholder="Price Min">
+		  	</div>
+
+		  	<div class="col-xs-2">
+		    	<input type="text" class="form-control pricemax" placeholder="Price Max">
+		  	</div>
+
+			<div class="col-xs-3">
+		    	<button type="submit" class="btn btn-primary btn-md" id="submitButton">Submit</button>
+		  	</div> 
+		</div>
+
+		<div class="form-group row">
+			<div class="col-xs-3">
+				<label class="form-check-label">Building Type
+					<div class="form-check">
+						<label class="form-check-label">
+							<input class="form-check-input" type="checkbox" value="">
+							Apartment
+						</label>
+					</div>
+
+					<div class="form-check">
+						<label class="form-check-label">
+							<input class="form-check-input" type="checkbox" value="">
+							House
+						</label>
+					</div>
+
+					<div class="form-check">
+						<label class="form-check-label">
+							<input class="form-check-input" type="checkbox" value="">
+							Luxury Condo
+						</label>
+					</div>
+				</label>	
+			</div>
+
+			<div class="col-xs-3">
+				<label class="form-check-label">Laundry
+					<div class="form-check">
+						<label class="form-check-label">
+							<input class="form-check-input" type="checkbox" value="">
+							In unit
+						</label>
+					</div>
+
+					<div class="form-check">
+						<label class="form-check-label">
+							<input class="form-check-input" type="checkbox" value="">
+							In building
+						</label>
+					</div>
+
+					<div class="form-check">
+						<label class="form-check-label">
+							<input class="form-check-input" type="checkbox" value="">
+							None
+						</label>
+					</div>
+				</label>
+			</div>
+
+			<div class="col-xs-3">
+				<label class="form-check-label">Amenities
+					<div class="form-check">
+						<label class="form-check-label">
+							<input class="form-check-input" type="checkbox" value="">
+							Pool
+						</label>
+					</div>
+
+					<div class="form-check">
+						<label class="form-check-label">
+							<input class="form-check-input" type="checkbox" value="">
+							Hot Tub
+						</label>
+					</div>
+
+					<div class="form-check">
+						<label class="form-check-label">
+							<input class="form-check-input" type="checkbox" value="">
+							Gym
+						</label>
+					</div>
+				</label>
+			</div>
+
+
+			<div class="col-xs-3">
+				<label class="form-check-label">Other
+					<div class="form-check">
+						<label class="form-check-label">
+							<input class="form-check-input" type="checkbox" value="">
+							Pets
+						</label>
+					</div>
+
+					<div class="form-check">
+						<label class="form-check-label">
+							<input class="form-check-input" type="checkbox" value="">
+							Parking
+						</label>
+					</div>
+
+					<div class="form-check">
+						<label class="form-check-label">
+							<input class="form-check-input" type="checkbox" value="">
+							Safe Area
+						</label>
+					</div>
+				
+					<div class="form-check">
+						<label class="form-check-label">
+							<input class="form-check-input" type="checkbox" value="">
+							Furnished
+						</label>
+					</div>
+
+					<div class="form-check">
+						<label class="form-check-label">
+							<input class="form-check-input" type="checkbox" value="">
+							Close to Caltrain
+						</label>
+					</div>
+				</label>
+			</div>
+		</div>
+	</form>  
+</div>
+
+<!--Card Property Section-->
+<div class="container">
+	<div class="cards" id="apartments">
+		<div class="row">
+			<div class="col-sm-4">
+		      	<div class="card">
+		      		<img class="card-img-top" src="https://placehold.it/318x180" alt="Card image cap">
+
+		      		<div class="card-block">
+		      			<h4 class="card-title">Card title</h4>
+		      			<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-sm-4">
+		      	<div class="card">
+				  <img class="card-img-top" src="https://placehold.it/318x180" alt="Card image cap">
+				 
+				  <div class="card-block">
+					    <h4 class="card-title">Card title</h4>
+					    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>	    
+		  			</div>
+				</div>
+			</div>
+
+			<div class="col-sm-4">
+		      	<div class="card">
+				  <img class="card-img-top" src="https://placehold.it/318x180" alt="Card image cap">
+				  <div class="card-block">
+					    <h4 class="card-title">Card title</h4>
+					    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					    
+		  			</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<!--Hidden until Submit is clicked-->
+	<div class="carousel" data-flickity>
+	  <div class="carousel-cell" id="cell1">
+	  	<div class="card">
+		  <img class="card-img-top" src="https://placehold.it/318x180" alt="Card image cap">
+		 
+		  <div class="card-block">
+			    <h4 class="card-title">Card title</h4>
+			    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>	    
+  			</div>
+		</div>
+	  </div>
+
+	  <div class="carousel-cell" id="cell2">
+	  	<div class="card">
+		  <img class="card-img-top" src="https://placehold.it/318x180" alt="Card image cap">
+		 
+		  <div class="card-block">
+			    <h4 class="card-title">Card title</h4>
+			    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>	    
+  			</div>
+		</div>
+	  </div>
+
+	  <div class="carousel-cell" id="cell3">
+	  	<div class="card">
+		  <img class="card-img-top" src="https://placehold.it/318x180" alt="Card image cap">
+		 
+		  <div class="card-block">
+			    <h4 class="card-title">Card title</h4>
+			    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>	    
+  			</div>
+		</div>
+	  </div>
+
+	  <div class="carousel-cell" id="cell4">
+	  	<div class="card">
+		  <img class="card-img-top" src="https://placehold.it/318x180" alt="Card image cap">
+		 
+		  <div class="card-block">
+			    <h4 class="card-title">Card title</h4>
+			    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>	    
+  			</div>
+		</div>
+	  </div>
+
+	  <div class="carousel-cell" id="cell5">
+	  	<div class="card">
+		  <img class="card-img-top" src="https://placehold.it/318x180" alt="Card image cap">
+		 
+		  <div class="card-block">
+			    <h4 class="card-title">Card title</h4>
+			    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>	    
+  			</div>
+		</div>
+	  </div>
+	</div>
+</div>
+<!--End Card Property Section-->
+
+
+
+
+<!--Team Member Section-->
+<section class="container" id="team">
+    <div class="row">
+    	<div class="col-lg-12 text-center">
+    		<h2 class="section-heading">Our Amazing Team</h2>
+    		<h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+    	</div>
+    </div>
+
+    <div class="row">
+    	<div class="col-sm-3">
+    		<div class="team-member">
+    			<center>
+        			<img class="img-circle" src="http://via.placeholder.com/300x300" alt="" style="width:200px;height:200px;">
+					<h4>Member Name</h4>
+					<p class="text-muted">Member Description</p>
+					<p class="text-muted">Why I Like Aptzilla</p>
+         		</center>
+        	</div>
+      	</div>
+      	
+      	<div class="col-sm-3">
+    		<div class="team-member">
+    			<center>
+        			<img class="img-circle" src="http://via.placeholder.com/300x300" alt="" style="width:200px;height:200px;">
+					<h4>Member Name</h4>
+					<p class="text-muted">Member Description</p>
+					<p class="text-muted">Why I Like Aptzilla</p>
+         		</center>
+        	</div>
+      	</div>
+
+      	<div class="col-sm-3">
+    		<div class="team-member">
+    			<center>
+        			<img class="img-circle" src="http://via.placeholder.com/300x300" alt="" style="width:200px;height:200px;">
+					<h4>Member Name</h4>
+					<p class="text-muted">Member Description</p>
+					<p class="text-muted">Why I Like Aptzilla</p>
+         		</center>
+        	</div>
+      	</div>
+
+		 	<div class="col-sm-3">
+    		<div class="team-member">
+    			<center>
+        			<img class="img-circle" src="http://via.placeholder.com/300x300" alt="" style="width:200px;height:200px;">
+					<h4>Member Name</h4>
+					<p class="text-muted">Member Description</p>
+					<p class="text-muted">Why I Like Aptzilla</p>
+         		</center>
+        	</div>
+      	</div>
+
+    </div>
+
+</section>
+
+
+
+</body>
+</html>
